@@ -1,4 +1,4 @@
-const getResult = () => 'hola mundo'
+const getResult = () => 'Jasubi'
 
 const newMessage = {
   message: 'Hola Mundo',
