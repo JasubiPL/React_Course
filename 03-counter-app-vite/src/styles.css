@@ -5,3 +5,16 @@ html, body{
   font-size: 1.3rem;
   padding: 70px;
 }
+
+button{
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #264ddb;
+  border: none;
+  color: #fff;
+}
+
+button:active{
+  background-color: #2699db;
+}
