@@ -5,13 +5,14 @@ const newMessage = {
   title: 'Jasubi'
 }
 
-export const FirstApp = () =>{
+export const FirstApp = ( { title, subtitle } ) =>{
 
   return(
     <>
-      <h1>{ getResult() }</h1>
+      <h1>{ title }</h1>
+      {/* <h1>{ getResult() }</h1> */}
       {/* <code>{ JSON.stringify( newMessage )}<code/> */}
-      <p>Soy un parrafo</p>
+      <p>{ subtitle }</p>
     </>
   );
 }
