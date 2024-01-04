@@ -1,20 +1,24 @@
 import { useState } from "react"
+import { AddCategory } from "./components/AddCategory"
 
 export const GifExpertApp = () => {
 
-  const [category, setCategory] = useState(['One Punch', 'Dragon Ball'])
+  const [categories, setCategories] = useState(['One Punch', 'Dragon Ball'])
 
-  const onAddCategories = () =>{
-    setCategory([ 'Valorant', ...category ])
+  const onAddCategories = (submittedCategory) =>{
+    if(categories.includes(submittedCategory)) return;
+    
+    setCategories([ submittedCategory, ...categories ])
   }
 
   return(
     <>
       <h1>Gif Expert App</h1>
-      <button onClick={ onAddCategories }> Agregar </button>
+
+      <AddCategory onAddCategories={onAddCategories} categories={categories}/>
 
       <ol>
-        { category.map(category => {
+        { categories.map(category => {
           return <li key={ category }>{ category }</li>
         }) }
       </ol>
