@@ -7,6 +7,20 @@ body {
   padding: 60px;
 }
 
+button{
+  border-radius: 10px;
+  border: none;
+  background-color: #324fee;
+  color: #fff;
+  padding: 0px 20px;
+  font-size: 18px;
+
+  &:hover{
+    background-color: #4760ec;
+    cursor: pointer;
+  }
+}
+
 input {
   background-color: white;
   border-radius: 5px;
@@ -14,7 +28,7 @@ input {
   color: black;
   font-size: 1.2rem;
   outline: none;
-  padding: 10px 15px;
+  padding: 10px 0px;
   width: 100%;
 }
 
@@ -25,6 +39,16 @@ h2 {
 h3 {
   font-size: 3rem;
   margin-bottom: 5px;
+}
+
+.form-container{
+  display: flex;
+  width: 100%;
+  gap: 10px;
+
+  & form{
+    width: 100%;
+  }
 }
 
 .card-grid {
@@ -60,4 +84,22 @@ h3 {
 
 .card img {
   width: 100%;
+}
+
+.loading{
+  width: 70px;
+  aspect-ratio: 1/1;
+  border: solid 10px #324fee;
+  border-radius: 100px;
+  border-bottom-color: rgba(0, 0, 0, 0);
+  animation: spiner .5s infinite linear;
+}
+
+@keyframes spiner {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
 }
