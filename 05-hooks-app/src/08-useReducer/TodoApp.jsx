@@ -17,7 +17,7 @@ const initialState =[
 ]
 
 const init = () =>{
-  return JSON.parse( localStorage.getItem('todos') || [] )
+  return JSON.parse( localStorage.getItem('todos'))|| []
 }
 
 export const TodoApp = () =>{
@@ -36,6 +36,15 @@ export const TodoApp = () =>{
     dispatch( action )
   }
 
+  const handlerDeleteTodo = ( id ) =>{
+    dispatch({
+      type: '[TODO] Remove Todo',
+      payload: id
+    })
+    
+  }
+
+
 
   
 
@@ -46,13 +55,13 @@ export const TodoApp = () =>{
 
       <div className="row">
         <div className="col-7">
-          <TodoList todos={todos} />
+          <TodoList todos={todos} handlerDeleteTodo={ handlerDeleteTodo }/>
         </div>
         <div className="col-5">
           <h4>Agregar Todo</h4>
           <hr />
 
-          <TodoAdd handlerNewTodo={ handlerNewTodo }/>
+          <TodoAdd handlerNewTodo={ handlerNewTodo } />
         </div>
       </div>
 
