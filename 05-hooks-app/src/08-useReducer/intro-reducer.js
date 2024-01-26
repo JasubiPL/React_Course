@@ -9,7 +9,7 @@ const initialState =[{
 const todoReducer = (state = initialState, action = {} ) =>{
   if(action.type === '[TODO] add todo'){
     return [...state, action.payload]
-    console.log(state)
+    //console.log(state)
   }
 
   return state
@@ -34,4 +34,4 @@ const addTodoAction = {
 // Se añade el nuevo elemnto al estado
 todos = todoReducer( todos, addTodoAction)
 
-console.log({state: todos})
+//console.log({state: todos})
